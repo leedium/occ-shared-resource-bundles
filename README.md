@@ -12,4 +12,6 @@ This library is used for self contained React widgets and elements in [Oracle Co
 
 3. DCU push the changes.
 
+Use this with [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") to create standalone react application in companion with your current native knockout/jquery components.
+
 
