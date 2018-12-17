@@ -1,6 +1,9 @@
 # occ-react-global
 External [React](https://reactjs.org/ "React") Libraries for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
+#### React version:
+16.6.3
+
 This library is used for self contained React widgets and elements in [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
 ### Installation

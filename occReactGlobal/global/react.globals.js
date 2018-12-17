@@ -1,6 +1,10 @@
-var REACT_PATH = "https://unpkg.com/react@16.5.2/umd/react.production.min";
-var REACT_DOM =
-  "https://unpkg.com/react-dom@16.5.2/umd/react-dom.production.min";
+// update this for dev / prod version
+
+// var REACT_PATH = "https://unpkg.com/react@16.6.3/umd/react.production.min";
+// var REACT_DOM =  "https://unpkg.com/react-dom@16.6.3/umd/react-dom.production.min";
+
+var REACT_PATH = "https://unpkg.com/react@16.6.3/umd/react.development.js";
+var REACT_DOM =  "https://unpkg.com/react-dom@16.6.3/umd/react-dom.development.js";
 requirejs.config({
   paths: {
     react: REACT_PATH,
