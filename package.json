@@ -1,0 +1,30 @@
+{
+  "name": "occ-react-global",
+  "version": "1.0.0",
+  "description": "Global occ dependencies",
+  "main": "app/index.js",
+  "scripts": {
+    "build:dev": "webpack --mode=develeopment",
+    "build:prod": "webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leedium/occ-react-global.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leedium/occ-react-global/issues"
+  },
+  "homepage": "https://github.com/leedium/occ-react-global#readme",
+  "devDependencies": {
+    "styled-components": "^4.1.3",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
