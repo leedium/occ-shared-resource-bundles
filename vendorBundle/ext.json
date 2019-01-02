@@ -1,0 +1,9 @@
+{
+  "createdBy": "LEEDIUM",
+  "description": "Webpack vendor bundles to load shared npm dependencies",
+  "developerID": "developers@leedium.com",
+  "extensionID": "f512bc37-7282-49d9-86f0-831d83bd7ae5",
+  "name": "Webpack vendor DLL bundle",
+  "timeCreated": "2019-01-19",
+  "version": 1
+}
