@@ -13,6 +13,8 @@ pids
 
 *.xml
 
+*.zip
+
 .idea/
 
 
