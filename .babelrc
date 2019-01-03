@@ -11,5 +11,10 @@
       }
     ]
   ],
-  "plugins": []
+  "plugins": [
+    "babel-plugin-styled-components",
+    "add-module-exports",
+    "transform-class-properties",
+    "transform-es2015-modules-commonjs"
+  ]
 }
