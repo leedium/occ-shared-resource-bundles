@@ -1,19 +1,17 @@
 # occ-shared-resource-bundles
-Dynamically Linked Libraries for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
+Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
 #### version 1.8.3
 
-#Release Notes
+#### Release Notes
 2.0.0
   - Full Refactor to Shared Resource Bundle using webpack SplitChunks
 
-This library is used as the primary dependency resource for multiple
-[occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud")   
-which are self contained [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") React Applications
-suckling off the teet of the vendor bundles. SUPER cool stuff.  This reduces dependency reducdency across your installed modules. 
+#### About
+This library is used as the primary dependency resource for multiple webpack applications such as the
+[occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") The idea is that you have self contained [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") React Applications suckling off the teet of the vendor bundles. SUPER cool stuff.  This reduces dependency redundencies across your installed modules, optimizes load time, and speeds up development. 
 
 ### Instructions
-
 1.Install the dependencies you wish to include in your global bundle.
 ```
 $ npm i {YOUR_MODULES ...} --save 
@@ -37,7 +35,7 @@ You will use the DCU to upload the file in step 5
   OCC_GLOBAL_FILE_NAME: {FILE NAME}
 ```
 
-###IMPORTANT 
+### IMPORTANT 
 For steps 4 , DO NOT use webpack minification as OCC already performs this task and you will waste hours
 wondering what's wrong.   
 
@@ -72,7 +70,7 @@ Verify that your file is there by inspecting the network requests in your browse
 7.Go [here](https://github.com/leedium/occ-react-component) for instructions in setting up your component.  This is a React example!
 
 
-###  Credits
+### Credits
 [Webpack](https://webpack.js.org/plugins/split-chunks-plugin/)   
 [Styled Components Issues](https://github.com/styled-components/styled-components/issues) 
  
