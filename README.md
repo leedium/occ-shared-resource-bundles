@@ -1,7 +1,7 @@
 # occ-shared-resource-bundles
 Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
-#### version 1.8.3
+#### version 2.0.0
 
 #### Release Notes
 2.0.0
