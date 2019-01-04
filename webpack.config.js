@@ -26,8 +26,10 @@ const webpack = require("webpack");
 const OCC_GLOBAL_FILE_NAME = "z4ma.globals.min.js";
 
 module.exports = (env, argv) => ({
-  entry: {
-    vendor: ["react", "react-hot-loader", "react-dom", "styled-components"]
+  entry: argv.mode === "production" ? {
+    "vendor-prod": ["react", "react-hot-loader", "react-dom", "styled-components"]
+  } : {
+    "vendor-dev": ["react", "react-hot-loader", "react-dom", "styled-components"]
   },
   devtool: argv.mode === "production" ? "none" : "eval-source-map",
   module: {
@@ -65,11 +67,11 @@ module.exports = (env, argv) => ({
     // new BundleAnalyzerPlugin(),
     new webpack.DllPlugin({
       name: "[name]",
-      path: "./vendorManifest/[name].json"
+      path: `./vendorManifest/[name].json`
     })
   ],
   optimization: {
-    minimize: false,
+    minimize: argv.mode !== "production",
     splitChunks: {
       chunks: "all",
       maxInitialRequests: Infinity,
