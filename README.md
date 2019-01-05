@@ -1,7 +1,7 @@
 # occ-shared-resource-bundles
 Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
-#### version 1.8.3
+#### version 2.0.0
 
 #### Release Notes
 2.0.0
@@ -9,12 +9,12 @@ Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https:
 
 #### About
 This library is used as the primary dependency resource for multiple webpack applications such as the
-[occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") The idea is that you have self contained [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") React Applications suckling off the teet of the vendor bundles. SUPER cool stuff.  This reduces dependency redundencies across your installed modules, optimizes load time, and speeds up development. 
+[occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") The idea is that you have self contained [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") React Applications suckling off the teet of the vendor bundles. SUPER cool stuff.  This reduces dependency redundencies across your installed modules, optimizes load time, and speeds up development.
 
 ### Instructions
 1. Install the dependencies you wish to include in your global bundle.
 ```
-$ npm i {YOUR_MODULES ...} --save 
+$ npm i {YOUR_MODULES ...} --save
 ```
 
 2. Add those modules to the `webpack.config.js` entry configuration array so they will be included in the build
@@ -35,22 +35,22 @@ You will use the DCU to upload the file in step 5
   OCC_GLOBAL_FILE_NAME: {FILE NAME}
 ```
 
-### IMPORTANT 
+### IMPORTANT
 For steps 4 , DO NOT use webpack minification as OCC already performs this task and you will waste hours
-wondering what's wrong.   
+wondering what's wrong.
 
-4. Build either a development or production version.  The development version.   
-Development: contains Hot Module reload dependencies as well as sourcemaps. 
+4. Build either a development or production version.  The development version.
+Development: contains Hot Module reload dependencies as well as sourcemaps. Minified
 ```$xslt
 $ nmp run build:dev
 ```
 
-Production: Contains only production level dependencies or their respective production states.
+Production: Contains only production level dependencies or their respective production states. Not minified.
 ```$xslt
 $ nmp run build:prod
 ```
 
-5. Rename `vendor/DLL/vebdor.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.      
+5. Rename `vendor/DLL/vebdor.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.
 `dcu --put` that file directly into the OCCS globals folder.  Unless you want to be able to uninstall this,
 you don't need to create an actual widget. (make sure you have the registration key set up in your instance)
 
@@ -59,7 +59,7 @@ Steps:
 // 1. DCU grab
 $ dcu --grab --clean -n https://{your instance}.oracleoutsourcing.com
 
-// 2. Deploy 
+// 2. Deploy
 $ dcu --put global/{OCC_GLOBAL_FILE_NAME} --node https://{OCCS_INSTANCE}.oracleoutsourcing.com -k {APPLICATION KEY
 ```
 Verify that your file is there by inspecting the network requests in your browser.
@@ -71,9 +71,9 @@ Verify that your file is there by inspecting the network requests in your browse
 
 
 ### Credits
-[Webpack](https://webpack.js.org/plugins/split-chunks-plugin/)   
-[Styled Components Issues](https://github.com/styled-components/styled-components/issues) 
- 
+[Webpack](https://webpack.js.org/plugins/split-chunks-plugin/)
+[Styled Components Issues](https://github.com/styled-components/styled-components/issues)
+
 
 <br/><br/><br/>
 ### Disclaimer of Warranty.
