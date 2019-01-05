@@ -26,11 +26,24 @@ const webpack = require("webpack");
 const OCC_GLOBAL_FILE_NAME = "z4ma.globals.min.js";
 
 module.exports = (env, argv) => ({
-  entry: argv.mode === "production" ? {
-    "vendor-prod": ["react", "react-hot-loader", "react-dom", "styled-components"]
-  } : {
-    "vendor-dev": ["react", "react-hot-loader", "react-dom", "styled-components"]
-  },
+  entry:
+    argv.mode === "production"
+      ? {
+          "vendor-prod": [
+            "react",
+            "react-hot-loader",
+            "react-dom",
+            "styled-components"
+          ]
+        }
+      : {
+          "vendor-dev": [
+            "react",
+            "react-hot-loader",
+            "react-dom",
+            "styled-components"
+          ]
+        },
   devtool: argv.mode === "production" ? "none" : "eval-source-map",
   module: {
     rules: [

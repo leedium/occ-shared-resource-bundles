@@ -50,7 +50,10 @@ Production: Contains only production level dependencies or their respective prod
 $ nmp run build:prod
 ```
 
-5. Rename `vendor/DLL/vebdor.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.
+Vendor file will be postfixed with '-[dev | prod]'
+
+
+5. To deploy bundle to your OCCS, Rename `vendor/DLL/vebdor-prod.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.
 `dcu --put` that file directly into the OCCS globals folder.  Unless you want to be able to uninstall this,
 you don't need to create an actual widget. (make sure you have the registration key set up in your instance)
 
@@ -65,9 +68,9 @@ $ dcu --put global/{OCC_GLOBAL_FILE_NAME} --node https://{OCCS_INSTANCE}.oracleo
 Verify that your file is there by inspecting the network requests in your browser.
 
 
-6. Copy the `vendorManifest/vendor.json` file to your [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") folder
+6. Copy both the dev and prod `vendorManifest/vendor-{prod|dev}.json` files to your [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") folder
 
-7. Go [here](https://github.com/leedium/occ-react-component) for instructions in setting up your component.  This is a React example!
+7. Go [here](https://github.com/leedium/occ-react-component) for instructions in setting up your component.  (React example)!
 
 
 ### Credits
