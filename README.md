@@ -50,6 +50,11 @@ Production: Contains only production level dependencies or their respective prod
 $ nmp run build:prod
 ```
 
+Both: Will build both versions
+```$xslt
+$ nmp run build
+```
+
 Vendor file will be postfixed with '-[dev | prod]'
 
 

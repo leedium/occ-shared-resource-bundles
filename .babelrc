@@ -12,9 +12,9 @@
     ]
   ],
   "plugins": [
-    "babel-plugin-styled-components",
-    "add-module-exports",
-    "transform-class-properties",
-    "transform-es2015-modules-commonjs"
+    "react-hot-loader/babel",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-modules-commonjs",
+    ["@babel/plugin-proposal-class-properties",{"loose": true}]
   ]
 }
