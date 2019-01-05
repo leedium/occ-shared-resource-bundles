@@ -50,6 +50,11 @@ Production: Contains only production level dependencies or their respective prod
 $ nmp run build:prod
 ```
 
+Both: Will build both versions
+```$xslt
+$ nmp run build
+```
+
 5. Rename `vendor/DLL/vebdor.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.
 `dcu --put` that file directly into the OCCS globals folder.  Unless you want to be able to uninstall this,
 you don't need to create an actual widget. (make sure you have the registration key set up in your instance)
