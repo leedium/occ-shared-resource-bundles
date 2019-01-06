@@ -1,9 +1,11 @@
 # occ-shared-resource-bundles
-Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
+"Chunked" Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") .  
+Use with [occ-react-component](https://github.com/leedium/occ-react-component) or any webpack application.   
+Note: This particular version compiles to AMD RequireJS modules.
 
 #### version 2.0.0
 
-#### Release Notes
+## Release Notes
 2.0.0
   - Full Refactor to Shared Resource Bundle using webpack SplitChunks
   - Base library includes
@@ -17,11 +19,12 @@ Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https:
     }
   ```
 
-#### About
+## About
 This library is used as the primary dependency resource for multiple webpack applications such as the
 [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") The idea is that you have self contained [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") React Applications suckling off the teet of the vendor bundles. SUPER cool stuff.  This reduces dependency redundencies across your installed modules, optimizes load time, and speeds up development.
 
-### Instructions
+## Instructions
+
 1. Install the dependencies you wish to include in your global bundle.
 ```
 $ npm i {YOUR_MODULES ...} --save
@@ -45,11 +48,10 @@ You will use the DCU to upload the file in step 5
   OCC_GLOBAL_FILE_NAME: {FILE NAME}
 ```
 
-### IMPORTANT
-For steps 4 , DO NOT use webpack minification as OCC already performs this task and you will waste hours
+<b>Important</b> For step 4, DO NOT use webpack minification as OCC already performs this task and you will waste hours
 wondering what's wrong.
 
-4. Build either a development or production version.  The development version.
+4. Build either a development or production version.  The development version.  
 Development: contains Hot Module reload dependencies as well as sourcemaps. Minified
 ```$xslt
 $ nmp run build:dev
@@ -64,9 +66,7 @@ Both: Will build both versions
 ```$xslt
 $ nmp run build
 ```
-
-Vendor file will be postfixed with '-[dev | prod]'
-
+\*  the compiled filename will be postfixed with '-[dev | prod]'
 
 5. To deploy bundle to your OCCS, Rename `vendor/DLL/vebdor-prod.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.
 `dcu --put` that file directly into the OCCS globals folder.  Unless you want to be able to uninstall this,
@@ -88,13 +88,24 @@ Verify that your file is there by inspecting the network requests in your browse
 7. Go [here](https://github.com/leedium/occ-react-component) for instructions in setting up your component.  (React example)!
 
 
-### Credits
-[Webpack](https://webpack.js.org/plugins/split-chunks-plugin/)
-[Styled Components Issues](https://github.com/styled-components/styled-components/issues)
+## Credits
+[nodejs](https://github.com/nodejs/node)  
+[webpack 4](https://webpack.js.org/)  
+[babel 7](https://github.com/babel/babel)  
+[eslint](https://eslint.org/ "Eslint")  
+[react flow](https://flow.org/en/docs/frameworks/react/ "React Flow")  
+[reactjs](https://github.com/facebook/react/)  
+[react-hot-loader](https://github.com/gaearon/react-hot-loader)  
+[styled-components](https://github.com/styled-components/styled-components)  
+[Oracle DCU](https://docs.oracle.com/cd/E97801_02/Cloud.18D/ExtendingCC/html/s4405usethedcutograbanduploadsourceco01.html)  
+
+## Related
+Check out the [React Solution for Oracle Commerce cloud](https://github.com/leedium/occ-react-solution "Oracle Commerce Cloud React Solution") for a working proof on concept of how to use React as a quasi headless UI framework integrated into the OCC Admin.   
+
 
 
 <br/><br/><br/>
-### Disclaimer of Warranty.
+## Disclaimer of Warranty.
 
   THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
 APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
