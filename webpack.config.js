@@ -33,7 +33,8 @@ module.exports = (env, argv) => ({
             "react",
             "react-hot-loader",
             "react-dom",
-            "styled-components"
+            "styled-components",
+            "classnames"
           ]
         }
       : {
@@ -41,7 +42,8 @@ module.exports = (env, argv) => ({
             "react",
             "react-hot-loader",
             "react-dom",
-            "styled-components"
+            "styled-components",
+            "classnames"
           ]
         },
   devtool: argv.mode === "production" ? "none" : "eval-source-map",
