@@ -6,6 +6,16 @@ Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https:
 #### Release Notes
 2.0.0
   - Full Refactor to Shared Resource Bundle using webpack SplitChunks
+  - Base library includes
+  ```
+   "dependencies": {
+      "classnames": "^2.2.6",
+      "react": "^16.7.0",
+      "react-dom": "^16.7.0",
+      "react-hot-loader": "^4.6.3",
+      "styled-components": "^4.1.3"
+    }
+  ```
 
 #### About
 This library is used as the primary dependency resource for multiple webpack applications such as the
