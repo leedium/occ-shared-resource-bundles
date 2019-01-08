@@ -51,13 +51,14 @@ You will use the DCU to upload the file in step 5
 <b>Important</b> For step 4, DO NOT use webpack minification as OCC already performs this task and you will waste hours
 wondering what's wrong.
 
-4. Build either a development or production version.  The development version.  
-Development: contains Hot Module reload dependencies as well as sourcemaps. Minified
+4. Build either a development or production version.   
+
+Development: contains Hot Module reload dependencies as well as sourcemaps. (Minified)   
 ```$xslt
 $ nmp run build:dev
 ```
 
-Production: Contains only production level dependencies or their respective production states. Not minified.
+Production: Contains only production level dependencies or their respective production states. (Not minified).
 ```$xslt
 $ nmp run build:prod
 ```
@@ -68,7 +69,7 @@ $ nmp run build
 ```
 \*  the compiled filename will be postfixed with '-[dev | prod]'
 
-5. To deploy bundle to your OCCS, Rename `vendor/DLL/vebdor-prod.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 2.
+5. To deploy bundle to your OCCS, Rename `vendor/DLL/vebdor-prod.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 3.
 `dcu --put` that file directly into the OCCS globals folder.  Unless you want to be able to uninstall this,
 you don't need to create an actual widget. (make sure you have the registration key set up in your instance)
 
