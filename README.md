@@ -23,6 +23,9 @@ Note: This particular version compiles to AMD RequireJS modules.
 This library is used as the primary dependency resource for multiple webpack applications such as the
 [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") The idea is that you have self contained [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") React Applications suckling off the teet of the vendor bundles. SUPER cool stuff.  This reduces dependency redundencies across your installed modules, optimizes load time, and speeds up development.
 
+### Important  
+If this bundle changes then your will need to recompile your components with the updated manifest file.  
+
 ## Instructions
 
 1. Install the dependencies you wish to include in your global bundle.
