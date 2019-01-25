@@ -1,9 +1,9 @@
 # occ-shared-resource-bundles
-"Chunked" Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") .  
-Use with [occ-react-component](https://github.com/leedium/occ-react-component) or any webpack application.   
+"Chunked" Dynamically Linked Libraries(DLL) via webpack for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud") .
+Use with [occ-react-component](https://github.com/leedium/occ-react-component) or any webpack application.
 Note: This particular version compiles to AMD RequireJS modules.
 
-#### version 2.0.0
+#### version 2.2.0
 
 ## Release Notes
 2.0.0
@@ -51,7 +51,7 @@ You will use the DCU to upload the file in step 5
 <b>Important</b> For step 4, DO NOT use webpack minification as OCC already performs this task and you will waste hours
 wondering what's wrong.
 
-4. Build either a development or production version.  The development version.  
+4. Build either a development or production version.  The development version.
 Development: contains Hot Module reload dependencies as well as sourcemaps. Minified
 ```$xslt
 $ nmp run build:dev
@@ -89,18 +89,18 @@ Verify that your file is there by inspecting the network requests in your browse
 
 
 ## Credits
-[nodejs](https://github.com/nodejs/node)  
-[webpack 4](https://webpack.js.org/)  
-[babel 7](https://github.com/babel/babel)  
-[eslint](https://eslint.org/ "Eslint")  
-[react flow](https://flow.org/en/docs/frameworks/react/ "React Flow")  
-[reactjs](https://github.com/facebook/react/)  
-[react-hot-loader](https://github.com/gaearon/react-hot-loader)  
-[styled-components](https://github.com/styled-components/styled-components)  
-[Oracle DCU](https://docs.oracle.com/cd/E97801_02/Cloud.18D/ExtendingCC/html/s4405usethedcutograbanduploadsourceco01.html)  
+[nodejs](https://github.com/nodejs/node)
+[webpack 4](https://webpack.js.org/)
+[babel 7](https://github.com/babel/babel)
+[eslint](https://eslint.org/ "Eslint")
+[react flow](https://flow.org/en/docs/frameworks/react/ "React Flow")
+[reactjs](https://github.com/facebook/react/)
+[react-hot-loader](https://github.com/gaearon/react-hot-loader)
+[styled-components](https://github.com/styled-components/styled-components)
+[Oracle DCU](https://docs.oracle.com/cd/E97801_02/Cloud.18D/ExtendingCC/html/s4405usethedcutograbanduploadsourceco01.html)
 
 ## Related
-Check out the [React Solution for Oracle Commerce cloud](https://github.com/leedium/occ-react-solution "Oracle Commerce Cloud React Solution") for a working proof on concept of how to use React as a quasi headless UI framework integrated into the OCC Admin.   
+Check out the [React Solution for Oracle Commerce cloud](https://github.com/leedium/occ-react-solution "Oracle Commerce Cloud React Solution") for a working proof on concept of how to use React as a quasi headless UI framework integrated into the OCC Admin.
 
 
 
