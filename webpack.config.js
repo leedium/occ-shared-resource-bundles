@@ -30,6 +30,7 @@ module.exports = (env, argv) => ({
     argv.mode === "production"
       ? {
           "vendor-prod": [
+            "axios",
             "react",
             "react-hot-loader",
             "react-dom",
@@ -39,6 +40,7 @@ module.exports = (env, argv) => ({
         }
       : {
           "vendor-dev": [
+            "axios",
             "react",
             "react-hot-loader",
             "react-dom",
