@@ -6,10 +6,12 @@ Note: This particular version compiles to AMD RequireJS modules.
 #### version 2.2.0
 
 ## Release Notes
-2.2.0
-  - added axios
-2.1.0
-  - various bug fixes and node version check.
+2.2.0  
+  - added axios  
+  
+2.1.0  
+  - various bug fixes and node version check.  
+  
 2.0.0
   - Full Refactor to Shared Resource Bundle using webpack SplitChunks
   - Base library includes
