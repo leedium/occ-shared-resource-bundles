@@ -1,4 +1,4 @@
-define("/file/globals/z4ma.globals.min.js", [], function() { return /******/ (function(modules) { // webpackBootstrap
+define([], function() { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
