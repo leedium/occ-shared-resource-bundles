@@ -1,4 +1,4 @@
-define("/file/globals/vendor-prod.2.3.0.dll", [], function() { return /******/ (function(modules) { // webpackBootstrap
+define("/file/globals/vendor-prod.2.3.0.dll.min.js", [], function() { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/

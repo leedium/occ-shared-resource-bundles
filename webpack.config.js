@@ -24,8 +24,8 @@ const package = require("./package");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const webpack = require("webpack");
 
-const OCC_GLOBAL_FILE_NAME_PROD = `vendor-prod.${package.version}.dll`;
-const OCC_GLOBAL_FILE_NAME_DEV = `vendor-dev.${package.version}.dll`;
+const OCC_GLOBAL_FILE_NAME_PROD = `vendor-prod.${package.version}.dll.min.js`;
+const OCC_GLOBAL_FILE_NAME_DEV = `vendor-dev.${package.version}.dll.min.js`;
 
 module.exports = (env, argv) => ({
   entry:
