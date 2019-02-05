@@ -20,10 +20,12 @@
  */
 
 const path = require("path");
+const package = require("./package");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const webpack = require("webpack");
 
-const OCC_GLOBAL_FILE_NAME = "z4ma.globals.min.js";
+const OCC_GLOBAL_FILE_NAME_PROD = `vendor-prod.${package.version}.dll`;
+const OCC_GLOBAL_FILE_NAME_DEV = `vendor-dev.${package.version}.dll`;
 
 module.exports = (env, argv) => ({
   entry:
@@ -76,15 +78,15 @@ module.exports = (env, argv) => ({
   },
   output: {
     path: path.resolve(__dirname, "./vendorDLL"),
-    filename: "[name].dll.js",
-    library: `/file/globals/${OCC_GLOBAL_FILE_NAME}`,
+    filename: `[name].${package.version}.dll.js`,
+    library: `/file/globals/${argv.mode === "production" ? OCC_GLOBAL_FILE_NAME_PROD : OCC_GLOBAL_FILE_NAME_DEV}`,
     libraryTarget: "amd"
   },
   plugins: [
     // new BundleAnalyzerPlugin(),
     new webpack.DllPlugin({
       name: "[name]",
-      path: `./vendorManifest/[name].json`
+      path: `./vendorManifest/[name].${package.version}.json`
     })
   ],
   optimization: {
