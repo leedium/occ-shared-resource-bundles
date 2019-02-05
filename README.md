@@ -7,6 +7,7 @@ Note: This particular version compiles to AMD RequireJS modules.
 
 
 ## Release Notes
+
 2.3.0    
   - adding timestamp to file name
   - added OCC global application file template 
