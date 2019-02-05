@@ -3,15 +3,21 @@
 Use with [occ-react-component](https://github.com/leedium/occ-react-component) or any webpack application.
 Note: This particular version compiles to AMD RequireJS modules.
 
-#### version 2.2.0
+#### version 2.3.0
+
 
 ## Release Notes
-2.2.0  
+
+2.3.0    
+  - adding timestamp to file name
+  - added OCC global application file template 
+
+2.2.0
   - added axios  
   
-2.1.0  
-  - various bug fixes and node version check.  
-  
+2.1.0
+  - various bug fixes and node version check   
+
 2.0.0
   - Full Refactor to Shared Resource Bundle using webpack SplitChunks
   - Base library includes
@@ -78,9 +84,13 @@ $ nmp run build
 ```
 \*  the compiled filename will be postfixed with '-[dev | prod]'
 
-5. To deploy bundle to your OCCS, Rename `vendor/DLL/vebdor-prod.dll.js` to the `OCC_GLOBAL_FILE_NAME` you specified in step 3.
-`dcu --put` that file directly into the OCCS globals folder.  Unless you want to be able to uninstall this,
-you don't need to create an actual widget. (make sure you have the registration key set up in your instance)
+
+5. To deploy.  
+
+First upload the occ component located `occ/globaljs`.  
+OCC will not allow you to upload require js files where the dependency path does not math the file.
+Do a DCU grab and then replace the contents of the grabbed file with prod j `vendor-dev-{VERSION}.dll.js`s.
+DCU put the new file to OCCS.
 
 Steps:
 ```$xslt
@@ -92,8 +102,7 @@ $ dcu --put global/{OCC_GLOBAL_FILE_NAME} --node https://{OCCS_INSTANCE}.oracleo
 ```
 Verify that your file is there by inspecting the network requests in your browser.
 
-
-6. Copy both the dev and prod `vendorManifest/vendor-{prod|dev}.json` files to your [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") folder
+6. Copy both the dev and prod `vendorManifest/vendor-{prod|dev}.{VERSION}.json` files to your [occ-react-component](https://github.com/leedium/occ-react-component "Standalone react components for Oracle Commerce Cloud") folder
 
 7. Go [here](https://github.com/leedium/occ-react-component) for instructions in setting up your component.  (React example)!
 

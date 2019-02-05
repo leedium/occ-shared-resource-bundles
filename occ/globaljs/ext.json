@@ -1,0 +1,9 @@
+{
+  "createdBy": "LEEDIUM",
+  "description": "Contains shared dependencies across applications",
+  "developerID": "developers@leedium.com",
+  "extensionID": "f512bc37-7282-49d9-86f0-831d83bd7ae5",
+  "name": "[LEEDIUM] - Shared Webpack Resource Bundle",
+  "timeCreated": "2018-10-23",
+  "version": 1
+}
